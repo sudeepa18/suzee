@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>💌 A Letter For You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="letter-container">
+    <h1>💌 Dear Suzee,</h1>
+    <p>
+        My love,
+        I honestly don’t know where to begin, because there’s just so much in my heart when it comes to you. You’re not just my boyfriend—you’re my human diary, the one person I can open up to without ever feeling judged or uncomfortable. You know all my secrets, all my silly stories, all my fears… and you hold them so gently, like they matter. You’ve seen me at my worst, during those unpredictable mood swings, and instead of walking away or getting frustrated, you handle me with so much patience and care—it melts me every single time. With you, time just flies. I never realize how quickly it passes when I’m with you, because every moment feels light, fun, and full of something real. You make me laugh, you make me feel safe, and you never make me feel like I’m too much.
+        
+        I still can’t believe how you go out of your way to make me smile. Like when you buy me sweets and sneak them to me even though I have strict parents—hiding them somewhere I can get them later, like it’s a secret little gift from your heart to mine. Or when you came all the way at midnight on my birthday just to see me, just to make sure I didn’t feel alone. You never let your sleep or schedule come between us—you always pick up my calls, even when you're tired or half asleep, and that means the world to me. And the way you compliment me… even when I’m looking like an absolute mess, like a total homeless potato, you look at me like I’m the prettiest girl in the universe. And your dramatic reactions to the smallest things I do? I live for them. You notice every tiny detail, and it makes me feel so special. You truly do everything you can to make me happy—and I hope you know that every little thing doesn’t go unnoticed. I love you more than words can say, and I’m so lucky you’re mine.
+        
+        
+    </p>
+
+    <button onclick="goTo('reasons.html')">Why I Love You 💫</button>
+  </div>
+
+  <script>
+    function goTo(page) {
+      const urlParams = new URLSearchParams(window.location.search);
+      window.location.href = `${page}?score=${urlParams.get('score')}&total=${urlParams.get('total')}`;
+    }
+  </script>
+</body>
+</html>

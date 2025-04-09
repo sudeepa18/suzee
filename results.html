@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results 📝</title>
+  <style>
+    .results-container {
+      background: #fffafa;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 0 25px #f8c8dc;
+      text-align: center;
+      font-family: Georgia, serif;
+      font-size: 2.5rem;
+      max-width: 500px;
+      margin: 5% auto;
+    }
+
+    .results-container h1 {
+      color: #e75480;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .results-score {
+      font-size: 2.5rem;
+      color: #d63384;
+      margin: 1rem 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 2rem;
+      background-color: #ffaad4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff8dc2;
+    }
+  </style>
+</head>
+<body>
+  <div class="results-container">
+    <h1>🎯 Your Quiz Result</h1>
+    <p class="results-score" id="scoreText">You scored <span id="score">0</span> out of <span id="total">150</span>!</p>
+    <button onclick="goTo('certificate.html')">Get Certificate 🎓</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const score = urlParams.get('score') || 0;
+    const total = urlParams.get('total') || 150;
+
+    document.getElementById('score').textContent = score;
+    document.getElementById('total').textContent = total;
+
+    function goTo(page) {
+      window.location.href = `${page}?score=${score}&total=${total}`;
+    }
+  </script>
+</body>
+</html>

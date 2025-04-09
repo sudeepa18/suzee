@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate 🎓</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="certificate-container">
+    <h1 class="certificate-title">🌹 Certificate of the Best Boyfriend 🌹</h1>
+    <p>This is lovingly presented to</p>
+
+    <h2 class="certificate-name" id="username">Suzee</h2>
+
+    <p>who has proven himself as</p>
+
+    <h3 style="color: #c94f7c;">💘 The Most Amazing, Sweetest & Loving Boyfriend 💘</h3>
+
+    <p style="margin-top: 1.5rem; max-width: 600px; margin-inline: auto;">
+      For showering endless love, being my safe space, and making me smile even on my worst days. You have completed the Ultimate Love Quiz with a score of
+    </p>
+
+    <h2 style="color: #b85c8a; font-size: 2rem;">
+      <span id="score">0</span> / <span id="total">150</span>
+    </h2>
+
+    <p style="margin-top: 1.5rem;">
+      You are not just my boyfriend — you are my heart’s favorite person. 💞 <br>
+      Certified by: <strong>Your Girl , Sudeepa</strong> 🥰
+    </p>
+
+    <p style="margin-top: 1rem; font-style: italic;">Date:9/4/2025 </p>
+
+    <button onclick="goTo('letter.html')">Open Secret Letter 💌</button>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('score').textContent = urlParams.get('score') || 0;
+    document.getElementById('total').textContent = urlParams.get('total') || 150;
+
+    const hisName = localStorage.getItem("username") || "Suzee:)";
+    document.getElementById("username").textContent = hisName;
+
+   
+
+    function goTo(page) {
+      window.location.href = `${page}?score=${urlParams.get('score')}&total=${urlParams.get('total')}`;
+    }
+  </script>
+</body>
+</html>
